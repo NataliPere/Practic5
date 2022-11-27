@@ -15,10 +15,8 @@ void show_book(book& P) {
 }
 
 std::string author_name(book &P){
-	string s1 = P.author;
-	string s2 = s1.substr(0, s1.find(' '));
+	return P.author.substr(P.author.find(' ') +1);
 
-	return s2;
 }
 
 

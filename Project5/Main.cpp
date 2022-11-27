@@ -12,9 +12,9 @@ int main() {
 	int size = 3;
 	book* mass = new book[size];
 	
-	book p1{ "Harry Potter", "Jhoan Rowling", 2005, 269, 750 };
-	book p2{ "The great Gatsby", "Frencic Scott", 1984, 304, 690 };
-	book p3{ "The girls", "Emma Cline", 2000, 355, 890 };
+	book p1{ "Harry Potter", "Rowling Jhoan", 2005, 269, 750 };
+	book p2{ "The great Gatsby", "Scott Frencic", 1984, 304, 690 };
+	book p3{ "The girls", "Cline Emma", 2000, 355, 890 };
 
 	mass[0] = p1;
 	mass[1] = p2;
