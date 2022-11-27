@@ -14,7 +14,7 @@ void show_book(book& P) {
 	std::cout << "Стоимость: " << P.price << "\n\n";
 }
 
-std::string author_name(book &P){
+std::string author_name(book &P){ 
 	return P.author.substr(P.author.find(' ') +1);
 }
 
