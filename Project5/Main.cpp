@@ -47,14 +47,17 @@ int main() {
 			std::cout << "Введите необходимую для вызова функцию: 1 - Вывод информации о книге. 2 - Вывод имени автора. 3 - Сохранить данные о книге в файл. 4 - Добавить книгу. 5 - Очистить массив книг.\n\n";
 			std::cin >> n;
 			switch (n) {
-			case 1: std::cout << "Вывод информации о книге :"; show_book(mass[0]); break;
-			case 2: std::cout << "Вывод имени автора:"; author_name(mass[0]); break;
-			case 3: std::cout << "Данные о книгах в файл сохранены. "; save_book(mass[2], "file.txt"); size++; break;
+			case 1: std::cout << "Вывод информации о книге :";
+				show_book(p1); break;
+			case 2: std::cout << "Вывод имени автора:"; std::cout << author_name(p1); break;
+			case 3: std::cout << "Данные о книгах в файл сохранены. "; save_book(p2, "file.txt"); size++; break;
 			case 4: std::cout << "Добавить книгу: "; add_book(mass, size); break;
 			case 5: std::cout << "Массив книг очищен."; clear_arr(mass, size); break;
+			case 6: break;
+			default: std::cout << "Ошибка.";
 			}
 
-		} while (n == 6);
+		} while (n != 6);
 
 	
 		return 0;
