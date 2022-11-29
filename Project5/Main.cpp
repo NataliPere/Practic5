@@ -7,7 +7,7 @@
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int n = 0;
+	int n;
 
 	int size = 3;
 	book* mass = new book[size];
@@ -41,5 +41,20 @@ int main() {
 	show_book(mass[3]);
 	clear_arr(mass, size);
 
-	return 0;
+	
+	do {
+		std::cout << "Введите необходимую для вызова функцию: 1 - Вывод информации о книге. 2 - Вывод имени автора. 3 - Сохранить данные о книге в файл. 4 - Добавить книгу. 5 - Очистить массив книг.\n";
+		std::cin >> n;
+		switch (n) {
+		case 1: std::cout << "Вывод информации о книге :"; show_book(mass[0]); break;
+		case 2: std::cout << "Вывод имени автора:"; author_name(mass[2]); break;
+		case 3: std::cout << "Данные о книгах в файл сохранены. "; save_book(mass[2], "file.txt"); break;
+		case 4: std::cout << "Добавить книгу: "; add_book(mass, size); break;
+		case 5: std::cout << "Массив книг очищен."; clear_arr(mass, size); break;
+		}
+
+	} while (n > 5);
+	
+	
+		return 0;
 }

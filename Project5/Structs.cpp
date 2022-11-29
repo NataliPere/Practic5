@@ -3,7 +3,6 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
 
 void show_book(book& P) {
 
